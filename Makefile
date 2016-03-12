@@ -1,9 +1,9 @@
 all: send recv 
 
-send: send.o link_emulator/lib.o
+send: send.o link_emulator/lib.o hamming.h
 	gcc -g send.o link_emulator/lib.o -o send
 
-recv: recv.o link_emulator/lib.o
+recv: recv.o link_emulator/lib.o hamming.h
 	gcc -g recv.o link_emulator/lib.o -o recv
 
 .c.o: 
